@@ -9,7 +9,10 @@ targetEmail = 'YOUR_TARGET_EMAIL'
 targetSize = '14'
 url = "https://www.nike.com/ca/t/air-force-1-07-shoe-rWtqPn/CW2288-001"
 
-# while True:
-# check if size is available twice a day
-#   time.sleep(30)
-check_shoe_size(url, targetSize, myEmail, myPassword, targetEmail)
+while True:
+    # once shoe is available, discontinue the script
+    if check_shoe_size(url, targetSize, myEmail, myPassword, targetEmail) == True:
+        print("SUCCESS")
+        break
+    # check if size is available twice a day
+    time.sleep(43200)
