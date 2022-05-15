@@ -55,7 +55,8 @@ def check_shoe_size(link, size, sender, password, target):
             break
 
     if available:
-        send(sender, password, target, "Subject: WANTED SHOE AVAILABILITY",
-             "The size " + size + " is now available")
+
+        send(sender, password, target, "Subject: WANTED SHOE AVAILABILITY", "(>^_^)><(^_^<)\n\n" +
+             "The size " + size + " is now available at:\n\n" + link)
     # else:
     #     print("The size " + size + " is not available")
