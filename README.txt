@@ -7,3 +7,5 @@ Note that the sender's address is directly going to spam. I used this website to
 If you need any help setting it up, please contact me at: guccirarezki@gmail.com
 
 This work is based off:  https://stackoverflow.com/questions/64263584/how-to-webscrape-the-available-sizes-of-a-product-from-nike
+
+Self Note: Authorize recipient in mailgun, filter the mail.
