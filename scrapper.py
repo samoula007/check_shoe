@@ -39,10 +39,6 @@ def check_shoe_size(link, size, sender, password, target):
     # And the following their availability
     available_skus = data['Threads']['products'][product_id]['availableSkus']
 
-    # Let's use pandas to cross both tables
-    df_skus = pd.DataFrame(skus)
-    df_available_skus = pd.DataFrame(available_skus)
-
     # find the skuId of the wanted size
     for sku in skus:
         if sku["nikeSize"] == size:
@@ -53,10 +49,10 @@ def check_shoe_size(link, size, sender, password, target):
         if available_sku["skuId"] == targetSkuId:
             available = True
             break
-
+    # if the size is available, send an email
     if available:
+        send(sender, password, target, "Subject: WANTED SHOE AVAILABILITY",
+             "(>^_^)><(^_^<)\n\n" + "The size " + size + " is now available at:\n\n" + link)
+        return True
 
-        send(sender, password, target, "Subject: WANTED SHOE AVAILABILITY", "(>^_^)><(^_^<)\n\n" +
-             "The size " + size + " is now available at:\n\n" + link)
-    # else:
-    #     print("The size " + size + " is not available")
+    return False
