@@ -2,7 +2,7 @@ from keep_alive import keep_alive
 from scrapper import check_shoe_size
 import time
 
-# the email you want to send the results to and the sender, please use your own sender email
+# Use your own sender email, this address is deprecated
 myEmail = 'postmaster@sandbox5397432e98084f0aa685b1e225a37ae8.mailgun.org'
 myPassword = 'c7438b0b847aaff7ac4e1ba16ca382c7-5e7fba0f-0b871cfb'
 targetEmail = 'YOUR_EMAIL'
